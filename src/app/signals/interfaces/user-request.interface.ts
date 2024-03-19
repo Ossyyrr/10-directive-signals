@@ -1,17 +1,17 @@
-export interface SingleUserResponse {
-  data: User;
+export interface SingleUserReponse {
+  data:    User;
   support: Support;
 }
 
 export interface User {
-  avatar: string;
-  email: string;
+  id:         number;
+  email:      string;
   first_name: string;
-  id: number;
-  last_name: string;
+  last_name:  string;
+  avatar:     string;
 }
 
 export interface Support {
+  url:  string;
   text: string;
-  url: string;
 }

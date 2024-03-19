@@ -1,44 +1,28 @@
 import { Component, signal } from '@angular/core';
 
+
 interface MenuItem {
   title: string;
-  router: string;
+  route: string;
 }
 
 @Component({
-  selector: 'app-side-menu',
+  selector: 'side-menu',
   templateUrl: './side-menu.component.html',
-  styleUrl: './side-menu.component.css',
+  styleUrls: ['./side-menu.component.css']
 })
 export class SideMenuComponent {
+
   public menuItems = signal<MenuItem[]>([
-    //! signal sirve para que el componente se actualice cuando cambie el valor
-    {
-      title: 'Contador',
-      router: 'counter',
-    },
-    {
-      title: 'Usuario',
-      router: 'user-info',
-    },
-    {
-      title: 'Mutaciones',
-      router: 'properties',
-    },
+    { title: 'Contador', route: 'counter' },
+    { title: 'Usuario', route: 'user-info' },
+    { title: 'Mutaciones', route: 'properties' },
   ]);
 
   // public menuItems: MenuItem[] = [
-  //   {
-  //     title: 'Contador',
-  //     router: 'counter',
-  //   },
-  //   {
-  //     title: 'Usuario',
-  //     router: 'user-info',
-  //   },
-  //   {
-  //     title: 'Mutaciones',
-  //     router: 'properties',
-  //   },
+  //   { title: 'Contador', route: 'counter' },
+  //   { title: 'Usuario', route: 'user-info' },
+  //   { title: 'Mutaciones', route: 'properties' },
   // ];
+
 }
