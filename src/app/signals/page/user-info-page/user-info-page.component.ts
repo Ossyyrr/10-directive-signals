@@ -1,8 +1,11 @@
-import { Component } from '@angular/core';
+import { Component, signal } from '@angular/core';
 
 @Component({
   selector: 'app-user-info-page',
   templateUrl: './user-info-page.component.html',
   styleUrl: './user-info-page.component.css',
 })
-export class UserInfoPageComponent {}
+export class UserInfoPageComponent {
+  // constructor(private userService: UserService) {}
+  public userId = signal<number>(1);
+}
